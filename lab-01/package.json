@@ -1,0 +1,21 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "Backend Development Fundamentals Lab 01 - Node.js and Express Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "bdf",
+    "lab-01"
+  ],
+  "author": "PYNENI PREETHAM CHOWDARY (252U1R1208)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
+
