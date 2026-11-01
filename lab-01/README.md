@@ -115,7 +115,8 @@ Follow these steps to set up the project locally:
 | **GET** | `/` | Returns welcome message | `200 OK` | Text / Plain |
 | **GET** | `/about` | Returns student name, registration number, and section | `200 OK` | JSON |
 | **GET** | `/time` | Returns current server date and time using JavaScript `new Date()` | `200 OK` | JSON |
-| **GET** | *Any unknown route* | Handles undefined routes with catch-all middleware | `404 Not Found` | JSON |
+| **GET** | `/date` | Returns today's date formatted as text | `200 OK` | Text / Plain |
+| **GET** | *Any unknown route* | Handles undefined routes with 404 error handler | `404 Not Found` | JSON |
 
 ### Sample Response Payloads
 
@@ -143,10 +144,17 @@ Follow these steps to set up the project locally:
   }
   ```
 
-- **GET `/unknown` (404 Fallback)**
+- **GET `/date`**
+  ```text
+  Today's date is Sun Nov 01 2026 16:34:00 GMT+0530 (India Standard Time)
+  ```
+
+- **GET `/unknown` (404 Error Handler)**
   ```json
   {
-    "error": "Route not found"
+    "error": "Not Found",
+    "message": "The requested path '/unknown' does not exist on this server.",
+    "statusCode": 404
   }
   ```
 

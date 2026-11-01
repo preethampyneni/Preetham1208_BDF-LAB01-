@@ -4,7 +4,8 @@
   "description": "Backend Development Fundamentals Lab 01 - Node.js and Express Server",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "start:http": "node http-server.js"
   },
   "keywords": [
     "nodejs",

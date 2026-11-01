@@ -56,13 +56,25 @@ app.get('/time', (req, res) => {
 });
 
 /**
- * Route: Unknown / Catch-All Routes
- * Description: Handles any undefined route and returns a 404 status code
+ * Route: GET /date (Optional / NxtWave format)
+ * Description: Returns today's date formatted as text
+ * HTTP Status: 200 OK
+ */
+app.get('/date', (req, res) => {
+  const date = new Date();
+  res.status(200).send(`Today's date is ${date}`);
+});
+
+/**
+ * Route: Unknown / Catch-All Routes (404 Error Handler)
+ * Description: Handles any undefined route and displays a detailed 404 error
  * HTTP Status: 404 Not Found
  */
 app.use((req, res) => {
   res.status(404).json({
-    error: 'Route not found'
+    error: 'Not Found',
+    message: `The requested path '${req.originalUrl}' does not exist on this server.`,
+    statusCode: 404
   });
 });
 
