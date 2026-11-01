@@ -84,6 +84,7 @@ Follow these steps to set up the project locally:
 
 ## Execution
 
+### Run the Express.js Web Server (Primary)
 1. Start the Express server:
    ```bash
    npm start
@@ -95,10 +96,17 @@ Follow these steps to set up the project locally:
    Press Ctrl+C to stop the server.
    ```
 
-3. Open your web browser or API client (Postman / Thunder Client / cURL) and navigate to:
-   ```
-   http://localhost:3000/
-   ```
+### Run the Plain HTTP Server (Task 3 Demo)
+To test the baseline built-in `http.createServer` implementation:
+```bash
+npm run start:http
+```
+
+### Accessing Endpoints
+Open your web browser or API client (Postman / Thunder Client / cURL) and navigate to:
+```
+http://localhost:3000/
+```
 
 > **Optional Environment Variable:**
 > By default, the application runs on port `3000`. You can configure a custom port via an environment variable without modifying code:
